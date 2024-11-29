@@ -1,2 +1,5 @@
 MATCH (prod:PrimaryNode {EntityType: "IfcDoor", GlobalId: "3XG2XEk291aQKzyDINFkLB"})-[:ObjectPlacement|RelativePlacement|Location]->(s:SecondaryNode)
 RETURN prod, s
+
+MATCH path = (n)-[:ObjectPlacement]->(m)
+RETURN path
